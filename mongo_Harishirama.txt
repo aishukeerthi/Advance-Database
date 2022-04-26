@@ -1,0 +1,267 @@
+mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+
+mongod.exe --dbpath "C:\data" 
+mongo.exe
+ceck for service
+
+
+
+61a39601af5d3bd239fbfeac dileep
+61a39613af5d3bd239fbfead shiva
+61a3963caf5d3bd239fbfeae ananth
+61a39655af5d3bd239fbfeaf sai
+
+
+
+vijay 61a3973eaf5d3bd239fbfeb0   dileep,shiva
+ramesh 61a3979baf5d3bd239fbfeb1  ananth
+raju   61a3a08faf5d3bd239fbfeb2  sai
+
+
+use Database
+db.dropDatabase()
+
+-----------------------------
+1) use hashirama
+
+db.createCollection("student")
+db.createCollection("parent")
+db.createCollection("student_grade")
+db.createCollection("course")
+db.createCollection("teacher")
+
+db.teacher.drop()
+
+
+db.student.insert({
+_id: "61a39601af5d3bd239fbfeac",
+student_id: "Student1",
+first_name: "Dileep",
+middle_name: "Kumar",
+last_name: "Dubasi",
+dob: "5 Jan 1991",
+gender: "Male"
+})
+
+
+
+db.student.insert({
+_id:"61a39613af5d3bd239fbfead",
+student_id: "Student2",
+first_name: "Shiva",
+middle_name: "Kumar",
+last_name: "Dubasi",
+dob: "10 Dec 1992",
+gender: "Male"
+})
+
+
+
+
+
+
+
+
+
+
+------------------------------------
+
+Parents thing
+vijay 61a3973eaf5d3bd239fbfeb0
+ramesh 61a3979baf5d3bd239fbfeb1
+raju   61a3a08faf5d3bd239fbfeb2
+
+
+
+
+Raju for dileep and shiva
+
+
+db.parent.insert({
+parent_id:"Raju",
+first_name:"Raju",
+middle_name:"Krishna",
+last_name:"Dubasi",
+email:"raju@gmail.com",
+password:"Raju",
+dob:"21 June 1976",
+"kids":
+ [
+  ObjectId("61a39601af5d3bd239fbfeac"),ObjectId("61a39613af5d3bd239fbfead")
+ ]
+})
+
+
+
+
+----------------------------
+exams thing
+
+dileep on java and c#
+shiva on DBMS and Cloudcomputing
+ananth on PHP And Bigdata
+sai on python and c++
+
+
+db.createCollection("student_grade")
+
+db.student_grade.insert({
+exam_id:"exam1",
+subject_id:"1",
+grade:"A",
+comment:"Your program did not execute 2 testcases. Kindly check in your system",
+semester:"Summer",
+year:"2021",
+"studentid":
+ [
+  ObjectId("61a39601af5d3bd239fbfeac")
+ ]
+})
+
+db.student_grade.insert({
+exam_id:"exam2",
+subject_id:"2",
+grade:"B",
+comment:"Your program failed to compile. Kindly check",
+semester:"Summer",
+year:"2021",
+"studentid":
+ [
+  ObjectId("61a39601af5d3bd239fbfeac")
+ ]
+})
+
+db.student_grade.insert({
+exam_id:"exam3",
+subject_id:"3",
+grade:"C",
+comment:"Unable to create schema with your commands so all your commands will not be working.",
+semester:"Summer",
+year:"2021",
+"studentid":
+ [
+  ObjectId("61a39613af5d3bd239fbfead")
+ ]
+})
+
+db.student_grade.insert({
+exam_id:"exam4",
+subject_id:"4",
+grade:"A+",
+comment:"Good Job",
+semester:"Summer",
+year:"2021",
+"studentid":
+ [
+  ObjectId("61a39613af5d3bd239fbfead")
+ ]
+})
+
+db.student_grade.insert({
+exam_id:"exam5",
+subject_id:"5",
+grade:"A",
+comment:"Date field validation is missing in your program",
+semester:"Summer",
+year:"2021",
+"studentid":
+ [
+  ObjectId("61a39613af5d3bd239fbfead")
+ ]
+})
+
+
+----------------------
+
+subjects thing
+dileep on java and c#
+shiva on DBMS and Cloudcomputing
+ananth on PHP And Bigdata
+sai on python and c++
+
+db.course.insert({
+subject_id:"1",
+name:"Java",
+description:"This subject will teach the Java concepts in detail"
+})
+
+db.course.insert({
+subject_id:"2",
+name:"C#",
+description:"This subject will teach the C# concepts in detail"
+})
+
+db.course.insert({
+subject_id:"3",
+name:"DBMS",
+description:"This subject will teach the DBMS concepts in detail"
+})
+
+db.course.insert({
+subject_id:"4",
+name:"Cloudcomputing",
+description:"This subject will teach the Cloudcomputing concepts in detail"
+})
+
+db.course.insert({
+subject_id:"5",
+name:"PHP",
+description:"This subject will teach the PHP concepts in detail"
+})
+
+db.course.insert({
+subject_id:"6",
+name:"BigData",
+description:"This subject will teach the BigData concepts in detail"
+})
+
+db.course.insert({
+subject_id:"7",
+name:"Python",
+description:"This subject will teach the Python concepts in detail"
+})
+
+db.course.insert({
+subject_id:"8",
+name:"C++",
+description:"This subject will teach the C++ concepts in detail"
+})
+
+------------------
+db.teacher.insert({
+userid:"Aishu",
+password:"Aishu"
+})
+
+db.teacher.insert({
+userid:"Aishu",
+password:"Aishu",
+contact:"999",
+teacher_name:"Aishwarya",
+teacher_id:"1"
+})
+
+db.teacher.insert({
+userid:"uma",
+password:"uma",
+contact:"9998",
+teacher_name:"uma devi",
+teacher_id:"2"
+})
+
+db.teacher.insert({
+userid:"lik",
+password:"lik",
+contact:"99989",
+teacher_name:"likitha",
+teacher_id:"3"
+})
+
+
+
+
+
+
+
+
+
